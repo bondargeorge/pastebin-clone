@@ -1,0 +1,45 @@
+body {
+  background: skyblue;
+  font-family: verdana;
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+form {
+  margin: 0 auto;
+  width: 400px;
+  padding: 1em;
+  border: 3px solid #ff69b4;
+  border-radius: 1em;
+}
+
+label {
+  position: relative;
+}
+
+textarea {
+  font: 1em sans-serif;
+  width: 250px;
+  box-sizing: border-box;
+  border: 2px solid #ff69b4;
+  vertical-align: top;
+  height: 5em;
+  resize: vertical;
+}
+
+button {
+  margin: 20px 0 0 124px;
+}
+
+label {
+  position: relative;
+}
+
+label em {
+  position: absolute;
+  right: 5px;
+  top: 20px;
+}

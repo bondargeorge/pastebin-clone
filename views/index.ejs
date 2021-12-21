@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pastebin clone</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <h1>Welcome to pastebin clone!</h1>
+
+    <section>
+      <h1>Create pastebin</h1>
+
+      <form action="/pastebins" method="POST">
+        <textarea name="pastebin" id="paste" rows="20" cols="100" placeholder="Add your text here.."></textarea>
+        <button type="submit">Create new pastebin</button>
+      </form>
+    </section>
+
+    <section>
+      <div>
+        <h2>Remove pastebin</h2>
+        <p>
+          Delete one pastebin created. Does nothing if there are no more
+          pastebins created.
+        </p>
+        <button id="delete-button">Delete pastebin</button>
+      </div>
+      <div id="message"></div>
+    </section>
+
+    <section>
+      <h2>Pastebins:</h2>
+
+      <ul class="pastebins">
+        <% for(var i = 0; i < pastebins.length; i++) {%>
+        <li class="pastebin">
+          <span><%= pastebins[i].pastebin %></span>
+        </li>
+        <% } %>
+      </ul>
+    </section>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
