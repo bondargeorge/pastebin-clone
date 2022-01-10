@@ -1,3 +1,4 @@
+require('dotenv').config();
 //use express
 const express = require('express');
 //handler for reading data from the form
@@ -6,10 +7,12 @@ const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 //start the application
 const app = express();
+//the connection string db url
+const dbUrl = process.env.DB_URL;
+//the port that the server is listening to
 const PORT = 3000;
-const connectionString = 'mongodb+srv://bumblebee:12345@cluster0.zujjw.mongodb.net/pastebin-clone-db?retryWrites=true&w=majority';
 
-MongoClient.connect(connectionString, { useUnifiedTopology: true })
+MongoClient.connect(dbUrl, { useUnifiedTopology: true })
   .then(client => {
     console.log('Connected to Database');
     const db = client.db('pastebin-clone-db');
