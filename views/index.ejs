@@ -13,7 +13,7 @@
       <h1>Create pastebin</h1>
 
       <form action="/pastebins" method="POST">
-        <textarea name="pastebin" id="paste" rows="20" cols="100" placeholder="Add your text here.."></textarea>
+        <textarea name="pastebinText" id="pastebinId" rows="20" cols="100" placeholder="Add your text here.."></textarea>
         <button type="submit">Create new pastebin</button>
       </form>
     </section>
@@ -36,7 +36,7 @@
       <ul class="pastebins">
         <% for(var i = 0; i < pastebins.length; i++) {%>
         <li class="pastebin">
-          <span><%= pastebins[i].pastebin %></span>
+          <span><%= pastebins[i].pastebinText %></span>
         </li>
         <% } %>
       </ul>
